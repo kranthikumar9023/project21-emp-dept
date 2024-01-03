@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emp</title>
+    <style>
+        th
+        {
+            text-align: center;
+        }
+        td
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Emp table</h1>
+        <table border="2px">
+           <tr>
+               <th>pk</th>
+               <th>Empno</th>
+               <th>Ename</th>
+               <th>sal</th>
+               <th>dept_no</th>
+           </tr>
+            {% for i in emp %}
+             <tr>
+                <td>{{i.pk}}</td>
+                <td>{{i.Empno}}</td>
+                <td>{{i.Ename}}</td>
+                <td>{{i.sal}}</td>
+                <td>{{i.dept_no}}</td>
+             </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
